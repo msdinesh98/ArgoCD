@@ -17,7 +17,7 @@ spec:
         - name: app-cont
           image: shaikmustafa/anath:v1
           ports:
-            - containerPort: 5454   #using 5454
+            - containerPort: 3000  #using 3000
 
 ---
 apiVersion: v1
@@ -30,5 +30,5 @@ spec:
     app: food
   ports:
     - port: 80
-      targetPort: 5454     #targetport=containerport
+      targetPort: 3000     #targetport=containerport
       protocol: TCP
