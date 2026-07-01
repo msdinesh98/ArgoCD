@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
         - name: app-cont
-          image: msdinesh98/easycart
+          image: shaikmustafa/anath:v1
           ports:
-            - containerPort: 80
+            - containerPort: 5454   #using 5454
 
 ---
 apiVersion: v1
@@ -30,4 +30,5 @@ spec:
     app: food
   ports:
     - port: 80
-      targetPort: 80
+      targetPort: 5454     #targetport=containerport
+      protocol: TCP
